@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width = device-width,initial-scale = 1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/navigate.css">
+</head>
+
+<body>
+
+
+<!--Top Navigation Bar-->
+<nav th:replace="admin/_fragments :: menu(0)" class="ui inverted attached segment change-border m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+
+            <h3 class="ui teal header item">Blog Management</h3>
+            <a href="../../index.html" class="m-item item m-mobile-hide"><i class="ui home icon"></i>Blog</a>
+            <a href="" class="m-item item m-mobile-hide"><i class="ui camera icon"></i>Photo</a>
+            <a href="../SortPage.html" class="m-item item m-mobile-hide"><i class="ui clone icon"></i>Sort</a>
+            <a href="../TagPage.html" class="m-item item m-mobile-hide"><i class="ui tag icon"></i>Tags</a>
+
+
+            <div class="right m-item m-mobile-hide menu">
+                <div class="item">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img class="ui avatar image" src="../../static/image/face.jpg"> Yuliang Wang
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="../../index.html" class="item">home</a>
+                            <a href=" " class="item">sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+                <i class="sidebar icon"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!--Mid Body-->
+
+<div class="ui container m-padded-large">
+    <div class="ui success large message">
+        <h3>Hi,</h3>
+        <p>Welcome Yuliang Wang</p>
+    </div>
+</div>
+<!--Bottom Footer Bar-->
+<footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padded-massive m-margin-top">
+    <div class="ui center aligned container ">
+        <div class="ui stackable inverted divided grid m-text-spaced m-text-opacity-mini">
+            <div class="three wide column">
+                <h4 class="ui inverted header">Wechat</h4>
+                <img src="../../static/image/wechat.jpg" class="ui rounded image" alt=""
+                     style="width: 10em; height: inherit;">
+            </div>
+
+            <div class="four wide column">
+                <div class="ui link inverted list">
+                    <h4 class="ui headers">Contact Info</h4>
+                    <div class="item">
+                        <i class="users icon"></i>
+                        <div class="content">
+                            Yuliang Wang
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="marker icon"></i>
+                        <div class="content">
+                            Seattle WA
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="phone icon"></i>
+                        <div class="content">
+                            425-902-9750
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="envelope icon"></i>
+                        <div class="content">
+                            russellwang4869@gmail.com
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="linkify icon"></i>
+                        <div class="content">
+                            <a href="https://www.linkedin.com/in/yuliang-wang-80381516b/">Linkedin Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4>Hobbies</h4>
+                <div class="ui inverted link list">
+                    <a class="">Favorite Songs</a>
+                    <br>
+                    <br>
+                    <a class="">Activities</a>
+                    <br>
+                    <br>
+                    <a class="">User Story</a>
+                </div>
+            </div>
+
+            <div class="six wide column">
+                <h4>我的座右铭</h4>
+                <div>1234567890987654321</div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <div class="ui m-text-size m-text-spaced m-text-opacity">Copyright © 2021-2022 MyBlog designed by Yuliang</div>
+    </div>
+</footer>
+
+<th:block th:replace="admin/_fragments::script"></th:block>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>-->
+
+</body>
+
+</html>

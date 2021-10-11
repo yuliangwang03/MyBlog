@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width = device-width,initial-scale = 1.0">
+    <title>MyBlog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/navigate.css" th:href="@{css/navigate.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{css/typo.css}">
+</head>
+
+<body>
+
+
+
+<nav th:replace="_fragments :: menu(1)">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+
+            <h2 class="ui teal header item">Blog</h2>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1}? 'active'"><i
+                    class="ui home icon"></i>Home</a>
+            <a href="ArchivePage.html" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i
+                    class="ui file icon"></i>Archive</a>
+            <a href="SortPage.html" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i
+                    class="ui clone icon"></i>Sort</a>
+            <a href="TagPage.html" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i
+                    class="ui tag icon"></i>Tags</a>
+            <a href="AboutMe.html" class="m-item item m-mobile-hide" th:classappend="${n==6} ? 'active'"><i
+                    class="user icon"></i>AboutMe</a>
+
+
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <label>
+                        <input type="text" placeholder="Search">
+                        <i class="search link icon"></i>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </div>
+</nav>
+<!--Middle Body bar-->
+<div id="body" class="ui m-container m-padded-large">
+    <div class="ui container">
+        <!--header-->
+        <div class="ui top attached segment">
+            <div class="ui horizontal link list">
+                <div class="item">
+                    <img src="../static/image/face.jpg" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+                    <div class="content">
+                        <a href="#" target="_blank" th:text="${blog.user.nickname}">Yuliang Wang</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="calender icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">07/03/2021</span>
+                </div>
+                <div class="item">
+                    <i class="eye icon"></i><span th:text="${blog.views}">2345</span>
+                </div>
+            </div>
+        </div>
+
+        <!--image-->
+        <div class="ui attached segment ">
+            <a href="https://picsum.photos/id/700/800/400" th:href="@{${blog.firstPicture}}" target="_blank">
+                <img src="https://picsum.photos/id/700/800/400" th:src="@{${blog.firstPicture}}" alt="" class="ui fluid rounded image">
+            </a>
+        </div>
+
+        <!--body-->
+        <div class="ui attached padded segment">
+            <div class="ui right aligned basic segment">
+                <div class="ui orange basic label" th:text="${blog.flag}">original</div>
+            </div>
+            <h2 class="ui center aligned header" th:text="${blog.title}">Header</h2><br>
+            <div id="context" class="ui typo typo-selection js-toc-content m-padded-lr m-padded-medium" th:utext="${blog.content}"></div>
+            <!--tags and favorite-->
+            <div class="m-padded-lr">
+                <div class="ui basic teal left pointing label"th:each="tag : ${blog.tags}" th:text="${tag.name}">NBA</div>
+            </div>
+
+            <div th:if="${blog.appreciation}">
+                <div class="ui center aligned basic segment">
+                    <button id="payButton" class="ui orange basic circular button" >reward</button>
+                </div>
+                <div class="ui flowing popup transition hidden">
+                    <div class="ui orange basic label">
+                        <div class="ui small images" style="font-size: inherit !important;">
+                            <div class="image">
+                                <img src="../static/image/wechat.jpg" th:src="@{/image/wechat.jpg}" alt="" class="ui rounded bordered image"
+                                     style="width:120px">
+                                <div>alipay</div>
+                            </div>
+                            <div class="image">
+                                <img src="../static/image/wechat.jpg" th:src="@{/image/wechat.jpg}" alt="" class="ui rounded bordered image"
+                                     style="width:120px">
+                                <div>wechat</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!--bottom-->
+        <div class="ui attached positive message" th:if="${blog.shareStatement}">
+            <div class="ui vertical center aligned grid">
+                <div class="eleven wide column">
+                    <ui class="list" >
+                        <li>Author: <span th:text="${blog.user.nickname}"></span></li>
+                        <li>Issuing Time: <span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">07/03/2021</span>b</li>
+                        <li>Contact: </li>
+                        <li></li>
+                    </ui>
+                </div>
+                <div class="five wide column">
+                    <img src="../static/image/wechat.jpg" th:src="@{/image/wechat.jpg}" alt="" class="ui floated right rounded bordered image"
+                         style="width: 120px;">
+                </div>
+            </div>
+        </div>
+
+        <!--comment-->
+        <div class="ui bottom attached segment" th:if="${blog.commentabled}">
+            <!--comment list-->
+            <div id="comment-container" class="ui segment">
+                <div th:fragment="commentList">
+                    <div class="ui threaded comments" style="max-width: 100%;">
+                        <h3 class="ui dividing header">Comments</h3>
+                        <!--parent level comment-->
+                        <div class="comment" th:each="comment : ${comments}">
+                            <a class="avatar">
+                                <img src="../static/images/smalllogo.png" th:src="${comment.avatar}==null? @{/image/face.jpg} : @{${comment.avatar}}">
+                            </a>
+                            <div class="content">
+
+                                <a class="author">
+                                    <span th:text="${comment.nickname}"> Matt</span>
+                                    <div class="ui mini basic teal left pointing label m-padded-lr-mini" th:if="${comment.adminComment}">author</div>
+                                </a>
+                                <div class="metadata">
+                                    <span class="date" th:text="${#dates.format(comment.createTime, 'MM-dd-yyyy HH:mm')}">Today at 5:42PM</span>
+                                </div>
+                                <div class="text" th:text="${comment.content}">
+                                    How artistic!
+                                </div>
+                                <div class="actions">
+                                    <!---->
+                                    <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id}, data-commentnickname=${comment.nickname}" onclick="reply(this)">Reply</a>
+                                </div>
+                            </div>
+                            <!--replies-->
+                            <div class="comments" th:if="${#arrays.length(comment.replyComments)} > 0">
+                                <div class="comment" th:each="reply : ${comment.replyComments}">
+                                    <a class="avatar">
+                                        <img src="" th:src="@{${reply.avatar}}" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author" >
+                                            <span th:text="${reply.nickname}">name</span>
+                                            <div class="ui mini basic teal left pointing label m-padded-lr-mini" th:if="${reply.adminComment}">author</div>
+                                            <span th:text="|@ ${reply.parentComment.nickname}|" class="m-poolside">@ name</span>
+                                        </a>
+                                        <div class="metadata">
+                                            <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
+                                        </div>
+                                        <div class="text" th:text="${reply.content}">
+                                            How artistic!
+                                        </div>
+                                        <div class="actions">
+                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}" onclick="reply(this)"> Reply </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="comment-form" class="ui form">
+                <input type="hidden" name="blog.id" th:value="${blog.id}">
+                <input type="hidden" name="parentComment.id" value="-1">
+                <div class="field">
+                    <textarea name="content" placeholder="Please input here..."></textarea>
+                </div>
+                <div class="fields">
+                    <div class="field m-margin-bottom-mini m-mobile-width">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="name" th:value="${session.customer}!=null ? ${session.customer.username}">
+                        </div>
+                    </div>
+                    <div class="field m-margin-bottom-mini m-mobile-width">
+                        <div class="ui left icon input">
+                            <i class="mail icon"></i>
+                            <input type="text" name="email" placeholder="email" th:value="${session.customer}!=null ? ${session.customer.email}">
+                        </div>
+                    </div>
+                    <div class="field m-margin-bottom-mini m-mobile-width">
+                        <button id="commentPost-btn" type="button" class="ui olive button m-mobile-width"><i class="edit icon"></i> Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--side bar-->
+<div id="sidebar" class="m-padded-large m-padded-lr-mini m-fixed m-right-bottom" style="display: none;">
+    <div class="ui vertical icon buttons">
+        <button id="menu" type="button" class="ui teal button">menu</button>
+        <a href="#comment-container" class="ui teal button">com</a>
+        <button id="wechat" type="button" class="ui icon button"><i class="wechat icon"></i></button>
+        <div id="scrolltoTop" class="ui teal button"><i class="chevron up icon"></i></div>
+    </div>
+</div>
+<!--menu popup-->
+<div class="ui menu flowing popup transition hidden">
+    <ol class="js-toc" style="width: 250px;"></ol>
+</div>
+<!--wechat icon popup-->
+<div id="qrcode" class="ui wechat flowing popup transition hidden">
+
+</div>
+
+<!--Bottom Footer Bar-->
+<footer th:replace="_fragments :: footer"></footer>
+
+
+<!--/*/<th:block th:replace="_fragments ::script"/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script th:inline="javascript">
+
+
+    $('#payButton').popup({
+        popup: $('.popup'),
+        on: 'click',
+        position: 'bottom center'
+    });
+
+    $('#scrolltoTop').click(function () {
+        $(window).scrollTo(0, 1000);
+    });
+
+
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+
+    $('#menu').popup({
+        popup: $('.menu.popup'),
+        on: 'click',
+        position: 'left center'
+    });
+    $('#wechat').popup({
+        popup: $('.wechat.popup'),
+        on: 'click',
+        position: 'left center'
+    });
+
+    let serurl = "http://localhost:8080/"
+    let url = /*[[@{/blog/{id}(id = ${blog.id})}]]*/"";
+    let qrcode = new QRCode("qrcode", {
+        text: serurl+url,
+        width: 110,
+        height: 110,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+    let waypoint = new Waypoint({
+        element: document.getElementById('body'),
+        handler: function (direction) {
+            if (direction === 'down') {
+                $('#sidebar').show(500);
+            } else {
+                $('#sidebar').hide(500);
+            }
+            console.log('Scrolled to waypoint!' + direction)
+        }
+    });
+
+    // validate comment form
+    $('.ui.form').form({
+        inline : true,
+        fields: {
+            content: {
+                identifier: 'content',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please input comment'
+                },{
+                    type: 'maxLength[255]',
+                    prompt: 'Comment exceeds 255 characters'
+                }]
+            },
+            nickname: {
+                identifier: 'nickname',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please input name'
+                },{
+                    type: 'regExp',
+                    value: '/^[0-9a-zA-Z\u4E00-\u9FA5]*$/g',
+                    prompt: 'Name contains illegal characters'
+                }]
+            },
+            email: {
+                identifier: 'email',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please input email'
+                },{
+                    type: 'email',
+                    prompt: 'Invalid email address'
+                }]
+            }
+        }
+    });
+
+    // load comments when launch the page
+    $(function () {
+        $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/6");
+    });
+
+    // submit comment
+    $('#commentPost-btn').click(function () {
+        let boo = $('.ui.form').form('validate form');
+        if (boo) {
+            console.log('Form validation success');
+            postData();
+        } else {
+            console.log('Form validation fail');
+        }
+
+    });
+
+    function postData() {
+        $("#comment-container").load(/*[[@{/comments}]]*/"",{
+            "parentComment.id" : $("[name='parentComment.id']").val(),
+            "blog.id" : $("[name='blog.id']").val(),
+            "nickname": $("[name='nickname']").val(),
+            "email"   : $("[name='email']").val(),
+            "content" : $("[name='content']").val()
+        },function (responseTxt, statusTxt, xhr) {
+            $(window).scrollTo($('#comment-container'),500);
+            clearContent();
+        });
+    }
+
+    function clearContent() {
+        $("[name='content']").val('');
+        $("[name='parentComment.id']").val(-1);
+        $("[name='content']").attr("placeholder", "Comment...");
+    }
+
+
+    function reply(obj) {
+        let commentId = $(obj).data('commentid');
+        let commentNickname = $(obj).data('commentnickname');
+        $("[name='content']").attr("placeholder", "@"+commentNickname).focus();
+        $("[name='parentComment.id']").val(commentId);
+        $(window).scrollTo($('#comment-form'),500);
+    }
+</script>
+</body>
+
+</html>

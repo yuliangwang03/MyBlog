@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="561f47e2-ecff-48a1-a57a-41c95b3daac2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1vxWeKYnptAdhsIZt14LG2JH05r" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/css" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\russe\IdeaProjects\blog\src\main\resources\static\css" />
+      <recent name="C:\Users\russe\IdeaProjects\blog\src\main\resources\templates" />
+      <recent name="C:\Users\russe\IdeaProjects\blog\src\main\resources" />
+      <recent name="C:\Users\russe\IdeaProjects\blog\src\main\resources\templates\admin" />
+      <recent name="C:\Users\russe\IdeaProjects\blog\src\main\resources\" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\russe\IdeaProjects\blog\src\main\resources\static\image" />
+      <recent name="C:\Users\russe\IdeaProjects\blog\src\main\resources\templates\admin" />
+      <recent name="C:\Users\russe\IdeaProjects\blog\src\main\resources\templates" />
+      <recent name="C:\Users\russe\IdeaProjects\blog\src\main\resources" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.wyl.blog.interceptor" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BlogApplication">
+    <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wyl.blog.util.MD5Util" />
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wyl.blog.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarkdownUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wyl.blog.util.MarkdownUtils" />
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wyl.blog.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/blog/templates/admin/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wyl.blog.BlogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MD5Util" />
+        <item itemvalue="Application.MarkdownUtils" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="561f47e2-ecff-48a1-a57a-41c95b3daac2" name="Default Changelist" comment="" />
+      <created>1627504315412</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627504315412</updated>
+      <workItem from="1627504316536" duration="3599000" />
+      <workItem from="1627517041956" duration="2380000" />
+      <workItem from="1627529606526" duration="146000" />
+      <workItem from="1627565461950" duration="1625000" />
+      <workItem from="1627567387117" duration="8148000" />
+      <workItem from="1627603110281" duration="27000" />
+      <workItem from="1627621114977" duration="593000" />
+      <workItem from="1627680440754" duration="899000" />
+      <workItem from="1627689338464" duration="4231000" />
+      <workItem from="1627704384090" duration="39000" />
+      <workItem from="1627704515594" duration="1720000" />
+      <workItem from="1627712270402" duration="12000" />
+      <workItem from="1627752688933" duration="12590000" />
+      <workItem from="1627785289411" duration="120000" />
+      <workItem from="1627792315867" duration="623000" />
+      <workItem from="1627840692097" duration="1846000" />
+      <workItem from="1627870930757" duration="860000" />
+      <workItem from="1627880968953" duration="3838000" />
+      <workItem from="1627915284487" duration="11218000" />
+      <workItem from="1627937341242" duration="9691000" />
+      <workItem from="1627951518181" duration="2878000" />
+      <workItem from="1627956775555" duration="6949000" />
+      <workItem from="1628014965248" duration="8071000" />
+      <workItem from="1628032489744" duration="376000" />
+      <workItem from="1628032877774" duration="5403000" />
+      <workItem from="1628050865699" duration="5588000" />
+      <workItem from="1628093448253" duration="9043000" />
+      <workItem from="1628112532190" duration="3176000" />
+      <workItem from="1628121268533" duration="3568000" />
+      <workItem from="1628143080372" duration="11749000" />
+      <workItem from="1628194256941" duration="6696000" />
+      <workItem from="1628226910245" duration="6425000" />
+      <workItem from="1628267320371" duration="9948000" />
+      <workItem from="1628277558234" duration="2025000" />
+      <workItem from="1628279741698" duration="12475000" />
+      <workItem from="1628295934121" duration="1816000" />
+      <workItem from="1628311575506" duration="3115000" />
+      <workItem from="1628358913072" duration="10001000" />
+      <workItem from="1628371529643" duration="421000" />
+      <workItem from="1628372022439" duration="52000" />
+      <workItem from="1628372238053" duration="995000" />
+      <workItem from="1628380087291" duration="383000" />
+      <workItem from="1628381318657" duration="371000" />
+      <workItem from="1628381761341" duration="74000" />
+      <workItem from="1628383265205" duration="4590000" />
+      <workItem from="1628390478993" duration="4197000" />
+      <workItem from="1628401503425" duration="74000" />
+      <workItem from="1628401627580" duration="913000" />
+      <workItem from="1628402969133" duration="556000" />
+      <workItem from="1628447659286" duration="13625000" />
+      <workItem from="1628468647303" duration="30000" />
+      <workItem from="1628477510774" duration="6391000" />
+      <workItem from="1628526315432" duration="679000" />
+      <workItem from="1628543796533" duration="6468000" />
+      <workItem from="1628550333127" duration="1735000" />
+      <workItem from="1628560376004" duration="172000" />
+      <workItem from="1628563315532" duration="5782000" />
+      <workItem from="1628615356186" duration="146000" />
+      <workItem from="1628615531877" duration="9465000" />
+      <workItem from="1628627324590" duration="1662000" />
+      <workItem from="1628629045833" duration="3146000" />
+      <workItem from="1628634039457" duration="3682000" />
+      <workItem from="1628654651259" duration="984000" />
+      <workItem from="1628701555032" duration="7700000" />
+      <workItem from="1628714575822" duration="16119000" />
+      <workItem from="1628785996113" duration="3190000" />
+      <workItem from="1628789278596" duration="1089000" />
+      <workItem from="1628892694696" duration="8932000" />
+      <workItem from="1628916275823" duration="1021000" />
+      <workItem from="1628917423821" duration="1555000" />
+      <workItem from="1629054741765" duration="1107000" />
+      <workItem from="1629055959807" duration="4644000" />
+      <workItem from="1629074031575" duration="122000" />
+      <workItem from="1629074274280" duration="227000" />
+      <workItem from="1629074834339" duration="1597000" />
+      <workItem from="1629089817567" duration="1215000" />
+      <workItem from="1629130133223" duration="11612000" />
+      <workItem from="1629146861964" duration="1433000" />
+      <workItem from="1629148317729" duration="415000" />
+      <workItem from="1629149587725" duration="375000" />
+      <workItem from="1629151926232" duration="10409000" />
+      <workItem from="1629179454516" duration="222000" />
+      <workItem from="1629219974166" duration="11465000" />
+      <workItem from="1629240198667" duration="54000" />
+      <workItem from="1629240531888" duration="4105000" />
+      <workItem from="1629246825391" duration="554000" />
+      <workItem from="1629247849595" duration="368000" />
+      <workItem from="1629313982885" duration="678000" />
+      <workItem from="1629314683957" duration="342000" />
+      <workItem from="1629351937983" duration="69000" />
+      <workItem from="1629474776893" duration="226000" />
+      <workItem from="1629476468527" duration="1292000" />
+      <workItem from="1629478986503" duration="26000" />
+      <workItem from="1629818279853" duration="676000" />
+      <workItem from="1629848374533" duration="301000" />
+      <workItem from="1629918036111" duration="1005000" />
+      <workItem from="1629948187340" duration="636000" />
+      <workItem from="1630005983279" duration="18000" />
+      <workItem from="1630033753973" duration="124000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.thymeleaf.exceptions.TemplateInputException" package="org.thymeleaf.exceptions" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.expression.spel.SpelEvaluationException" package="org.springframework.expression.spel" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="blog.typeId" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

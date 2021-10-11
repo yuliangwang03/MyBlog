@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width = device-width,initial-scale = 1.0">
+    <title>MyBlog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/navigate.css" th:href="@{/css/navigate.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+</head>
+
+<body>
+
+
+<!--Top Navigation Bar-->
+<nav th:replace="_fragments :: menu(5)">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+
+            <h2 class="ui teal header item">Blog</h2>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1}? 'active'"><i
+                    class="ui home icon"></i>Home</a>
+            <a href="ArchivePage.html" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i
+                    class="ui file icon"></i>Archive</a>
+            <a href="SortPage.html" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i
+                    class="ui clone icon"></i>Sort</a>
+            <a href="TagPage.html" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i
+                    class="ui tag icon"></i>Tags</a>
+            <a href="AboutMe.html" class="m-item item m-mobile-hide" th:classappend="${n==6} ? 'active'"><i
+                    class="user icon"></i>AboutMe</a>
+
+
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <label>
+                        <input type="text" placeholder="Search">
+                        <i class="search link icon"></i>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </div>
+</nav>
+
+<!--Mid Body-->
+<div class="ui container m-margin-top">
+    <div class="ui stackable grid">
+        <div class="eleven wide column">
+            <div class="ui segment ">
+                <img src="../static/image/face.jpg" th:src="@{/image/face.jpg}" class="ui fluid rounded images">
+            </div>
+        </div>
+
+        <div class="five wide column">
+            <div class="ui segment">
+                <div class="ui top attached segment">
+                    <div class="ui header">About Me</div>
+                </div>
+                <div class="ui attached segment">
+                    <h4>Description</h4>
+                    <p class="m-text">北京时间7月27日，据ESPN记者Andrian
+                        Wojnarawski等记者报道，孟菲斯灰熊队与新奥尔良鹈鹕队达成交易意向，灰熊队将送出尤纳斯-瓦兰丘纳斯、2021年NBA选秀权给鹈鹕队交易史蒂文-亚当斯、埃里克-布莱德索和选秀权。</p>
+
+                    <p class="m-text">
+                        记者Wojnarawski在个人社交媒体上写道：“消息源告诉ESPN重磅消息：孟菲斯正在敲定交易送走尤纳斯-瓦兰丘纳斯后卫2021年第17、第51顺位选秀权换取新奥尔良的史蒂文-亚当斯、埃里克-布莱德索、2021年第10、第40顺位选秀权和2022年湖人受保护的首轮签。”</p>
+                </div>
+                <div class="ui attached segment">
+                    <h4>Hobbies</h4>
+                    <div class="ui orange basic left pointing label m-margin-medium">coding</div>
+                    <div class="ui orange basic left pointing label m-margin-medium">basketball</div>
+                    <div class="ui orange basic left pointing label m-margin-medium">music</div>
+                    <div class="ui orange basic left pointing label m-margin-medium">eating</div>
+
+                </div>
+                <div class="ui attached segment">
+                    <h4>Skills</h4>
+                    <div class="ui violet basic top pointing label">Java</div>
+                    <div class="ui violet basic top pointing label">Data Structure</div>
+                    <div class="ui violet basic top pointing label">JavaScript</div>
+                    <div class="ui violet basic top pointing label">HTML</div>
+                    <div class="ui violet basic top pointing label">Git</div>
+                    <div class="ui violet basic top pointing label">React</div>
+                    <div class="ui violet basic top pointing label">Spring</div>
+                </div>
+                <div class="ui bottom attached segment">
+                    <a href="https://www.linkedin.com/in/yuliang-wang-80381516b/"
+                       class="ui linkedin blue basic circular icon button"><i class="linkedin icon"></i></a>
+                    <a href="#" id="weixin" class="ui green basic circular icon button"><i class="weixin icon"></i></a>
+                    <div class="ui flowing popup transition hidden">
+                        <div class="ui green basic label">
+                            <div class="ui small images" style="font-size: inherit !important;">
+                                <div class="image">
+                                    <img src="../static/image/wechat.jpg" th:src="@{/image/wechat.jpg}" alt="" class="ui rounded bordered image"
+                                         style="width:150px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="ui qq orange basic circular icon button" data-content="QQ: 1254623976"><i
+                            class="qq icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Bottom Footer Bar-->
+<footer th:replace="_fragments :: footer"></footer>
+
+
+<!--/*/<th:block th:replace="_fragments ::script"/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
+<!--/*/</th:block>/*/-->t>
+
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.qq').popup();
+    $('#weixin').popup({
+        popup: $('.popup'),
+        position: 'bottom center'
+    });
+    $('.linkedin').popup();
+</script>
+</body>
+
+</html>

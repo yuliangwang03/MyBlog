@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width = device-width,initial-scale = 1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/navigate.css" th:href="@{/css/navigate.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+</head>
+<body>
+<nav th:fragment="menu(0)" class="ui inverted attached segment change-border">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+
+            <h2 class="ui teal header item">Blog</h2>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </div>
+
+</nav>
+
+<div class="ui m-container-large">
+    <div class="ui grid">
+        <div class="four wide column"></div>
+        <div class="eight wide column m-padded-massive">
+            <div class="ui segment ">
+                <form action="#" method="post" th:object="${customer}" th:action="@{/Register}" class="ui form">
+
+                    <h3 class="ui center aligned blue dividing header">Register</h3>
+                    <label>Name</label>
+                    <div class="two fields">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="id card icon"></i>
+                                <input type="text" name="name" placeholder="Name" th:value="*{name}">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="username" placeholder="Username" th:value="*{username}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <label>Password</label>
+                    <div class="field">
+                            <span>enter password(6-20位以字母开头只能包含字母、数字、下划线)<label style="color:#ff0000;">*</label> <div id="passwordMSG"></div></span>
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" id="password" maxlength="20" required
+                                       onblur="checkPwd(this.value)" >
+                            </div>
+
+                            <span>repeat password<label style="color:red;">*</label> <div id="mm2MSG"></div></span>
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" id="mm2" maxlength="20" required oninput="checkPwd2(this.value)" th:value="*{password}">
+                            </div>
+                    </div>
+
+                    <label>Email</label>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="at icon"></i>
+                            <input type="text" name="email" placeholder="E-mail" th:value="*{email}">
+                        </div>
+                    </div>
+
+                    <label>Avatar</label>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user circle icon"></i>
+                            <input type="text" name="avatar" placeholder="avatar address" th:value="*{avatar}">
+                        </div>
+                    </div>
+
+                    <div class="ui right aligned container m-padded-top-mid">
+                        <button type="submit" id="submit" class="ui teal submit button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="four wide column"></div>
+    </div>
+</div>
+
+<script>
+
+    $('.ui.form').form({
+        fields: {
+            password: {
+                identifier: 'password',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please input your password'
+                }]
+            },
+            name: {
+                identifier: 'name',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please input your name'
+                }]
+            },
+            username: {
+                identifier: 'username',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please input your username'
+                }]
+            }
+        }
+    });
+
+
+
+/*验证密码*/
+function checkPwd(password) {
+/*获取提示框*/
+    const passwordMSG = document.getElementById("passwordMSG");
+    /*定义正则表达式*/
+    const reg = /^[a-zA-Z]\w{5,19}$/;
+    if(password.length>0){
+        const flag = reg.test(password);
+
+        if (!flag) {
+            passwordMSG.innerHTML = "<div class='m-font-wrong-style'>wrong password format！</div>";
+
+        } else {
+            passwordMSG.innerHTML = "<div class='m-font-right-style'>Please repeat password</div>";
+
+        }
+    }
+
+}
+
+/*验证重复密码*/
+let timeoutID;
+
+function checkPwd2(pwd2) {
+/*获取提示框*/
+    const mm2MSG = document.getElementById("mm2MSG");
+    /*获取第一个框输入的密码*/
+    const pwd1 = document.getElementById("password").value;
+//对上次未完成的延时操作进行取消
+    clearTimeout(timeoutID);
+//对于密码比对延迟500ms，避免频繁比对
+timeoutID = setTimeout(function(){
+/*进行比对*/
+
+    if (pwd1 != pwd2){
+        mm2MSG.innerHTML = "<div class='m-font-wrong-style'>password incorrect！</div>";
+        }
+    else{
+        mm2MSG.innerHTML = "<div class='m-font-right-style'>verify success</div>";
+        }
+    },500);
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Semantic CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <!-- mark down -->
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css"
+          th:href="@{/lib/editormd/css/editormd.min.css}">
+    <!-- prism -->
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <!-- Customize CSS -->
+    <link rel="stylesheet" href="../static/css/navigate.css" th:href="@{/css/navigate.css}">
+    <!--title-->
+    <title th:replace="${title}">fragments</title>
+</head>
+<body>
+
+<nav th:fragment="menu(n)" class="ui inverted attached segment change-border m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+
+            <h3 class="ui teal header item">Blog</h3>
+            <a href="../../BlogManagePage.html" th:href="@{/admin/BlogManagePage}" class="m-item item m-mobile-hide"
+               th:classappend="${n==1}? 'active'"><i class="ui home icon"></i>Blog</a>
+            <a href="../TypeManagePage.html" th:href="@{/admin/TypeManagePage}" class="m-item item m-mobile-hide"
+               th:classappend="${n==3}? 'active'"><i class="ui clone icon"></i>Type</a>
+            <a href="../TagManagePage.html" th:href="@{/admin/TagManagePage}" class="m-item item m-mobile-hide"
+               th:classappend="${n==4}? 'active'"><i class="ui tag icon"></i>Tags</a>
+
+
+            <div class="right m-item m-mobile-hide menu">
+                <div class="item">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img alt="" class="ui avatar image" src="../../static/image/face.jpg"
+                                 th:src="@{/image/face.jpg}">
+                            <span th:text="${session.user.nickname}">yuliang wang</span>
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="" th:href="@{/admin/logout}" class="item">sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+                <i class="sidebar icon"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<footer th:fragment="footer" class="ui inverted vertical segment m-padded-massive m-margin-top">
+    <div class="ui center aligned container ">
+        <div class="ui stackable inverted divided grid m-text-spaced m-text-opacity-mini">
+            <div class="three wide column">
+                <h4 class="ui inverted header">Wechat</h4>
+                <img src="../static/image/wechat.jpg" th:src="@{/image/wechat.jpg}" class="ui rounded image" alt=""
+                     style="width: 10em; height: inherit;">
+            </div>
+
+            <div class="four wide column">
+                <div class="ui link inverted list">
+                    <h4 class="ui headers">Contact Info</h4>
+                    <div class="item">
+                        <i class="users icon"></i>
+                        <div class="content">
+                            Yuliang Wang
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="marker icon"></i>
+                        <div class="content">
+                            Seattle WA
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="phone icon"></i>
+                        <div class="content">
+                            425-902-9750
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="envelope icon"></i>
+                        <div class="content">
+                            russellwang4869@gmail.com
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="linkify icon"></i>
+                        <div class="content">
+                            <a href="https://www.linkedin.com/in/yuliang-wang-80381516b/">Linkedin Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4>Hobbies</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="">Favorite Songs</a>
+                    <br>
+                    <br>
+                    <a href="#" class="">Activities</a>
+                    <br>
+                    <br>
+                    <a href="#" class="">User Story</a>
+                </div>
+            </div>
+
+            <div class="six wide column">
+                <h4>我的座右铭</h4>
+                <div>1234567890987654321</div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <div class="ui m-text-size m-text-spaced m-text-opacity">Copyright © 2021-2022 MyBlog designed by Yuliang</div>
+    </div>
+</footer>
+
+
+<th:block th:fragment="script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+    <script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
+
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+
+        $('.ui.dropdown').dropdown({
+            on: 'hover'
+        });
+
+        //close notification
+        $('.message .close')
+            .on('click', function () {
+                $(this)
+                    .closest('.message')
+                    .transition('fade');
+            });
+    </script>
+</th:block>
+</body>
+</html>

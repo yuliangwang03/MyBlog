@@ -1,0 +1,56 @@
+2021-08-18 12:29:21.019  INFO 12980 --- [restartedMain] com.wyl.blog.BlogApplication             : Starting BlogApplication using Java 15.0.1 on Yuliang-Computer with PID 12980 (C:\Users\russe\IdeaProjects\blog\target\classes started by russe in C:\Users\russe\IdeaProjects\blog)
+2021-08-18 12:29:21.019 DEBUG 12980 --- [restartedMain] com.wyl.blog.BlogApplication             : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 12:29:21.019  INFO 12980 --- [restartedMain] com.wyl.blog.BlogApplication             : The following profiles are active: dev
+2021-08-18 12:29:21.043  INFO 12980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-18 12:29:21.043  INFO 12980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-18 12:29:21.429  INFO 12980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-18 12:29:21.476  INFO 12980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 6 JPA repository interfaces.
+2021-08-18 12:29:21.866  INFO 12980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-18 12:29:21.882  INFO 12980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-18 12:29:21.882  INFO 12980 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-18 12:29:21.929  INFO 12980 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-18 12:29:21.929  INFO 12980 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 886 ms
+2021-08-18 12:29:22.023  INFO 12980 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-18 12:29:22.054  INFO 12980 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-08-18 12:29:22.132  INFO 12980 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-18 12:29:22.194  INFO 12980 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-18 12:29:46.129  INFO 5576 --- [restartedMain] com.wyl.blog.BlogApplication             : Starting BlogApplication using Java 15.0.1 on Yuliang-Computer with PID 5576 (C:\Users\russe\IdeaProjects\blog\target\classes started by russe in C:\Users\russe\IdeaProjects\blog)
+2021-08-18 12:29:46.132 DEBUG 5576 --- [restartedMain] com.wyl.blog.BlogApplication             : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-18 12:29:46.132  INFO 5576 --- [restartedMain] com.wyl.blog.BlogApplication             : The following profiles are active: dev
+2021-08-18 12:29:46.153  INFO 5576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-18 12:29:46.153  INFO 5576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-18 12:29:46.499  INFO 5576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-18 12:29:46.545  INFO 5576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 6 JPA repository interfaces.
+2021-08-18 12:29:46.919  INFO 5576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-18 12:29:46.935  INFO 5576 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-18 12:29:46.935  INFO 5576 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-18 12:29:46.982  INFO 5576 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-18 12:29:46.982  INFO 5576 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 829 ms
+2021-08-18 12:29:47.073  INFO 5576 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-18 12:29:47.089  INFO 5576 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-08-18 12:29:47.137  INFO 5576 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-18 12:29:47.183  INFO 5576 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-18 12:29:47.413  INFO 5576 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-18 12:29:47.413  INFO 5576 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-08-18 12:29:47.850  INFO 5576 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-18 12:29:47.850  INFO 5576 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-18 12:29:48.334  WARN 5576 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-18 12:29:48.490  INFO 5576 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-18 12:29:48.756  INFO 5576 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-18 12:29:48.772  INFO 5576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-18 12:29:48.787  INFO 5576 --- [restartedMain] com.wyl.blog.BlogApplication             : Started BlogApplication in 2.899 seconds (JVM running for 3.266)
+2021-08-18 12:29:55.944  INFO 5576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-18 12:29:55.944  INFO 5576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-18 12:29:55.945  INFO 5576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-08-18 12:29:55.958  INFO 5576 --- [http-nio-8080-exec-1] com.wyl.blog.aspect.LogAspect            : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.wyl.blog.web.CustomerController.loginPage', args=[]}
+2021-08-18 12:29:55.963  INFO 5576 --- [http-nio-8080-exec-1] com.wyl.blog.aspect.LogAspect            : Result : CustomerLogin
+2021-08-18 12:29:58.067  INFO 5576 --- [http-nio-8080-exec-4] com.wyl.blog.aspect.LogAspect            : Request: RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.wyl.blog.web.CustomerController.doLogin', args=[BestSup, aptx4869, org.apache.catalina.session.StandardSessionFacade@465a88b, {}, Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2021-08-18 12:29:58.136  WARN 5576 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-08-18 12:29:58.159  WARN 5576 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-08-18 12:29:58.164  INFO 5576 --- [http-nio-8080-exec-4] com.wyl.blog.aspect.LogAspect            : Result : index
+2021-08-18 12:29:59.925  INFO 5576 --- [http-nio-8080-exec-1] com.wyl.blog.aspect.LogAspect            : Request: RequestLog{url='http://localhost:8080/blog/34;jsessionid=E0BFFD758AFE6DC39A9CE70248899963', ip='0:0:0:0:0:0:0:1', classMethod='com.wyl.blog.web.IndexController.blog', args=[34, {}]}
+2021-08-18 12:29:59.963  INFO 5576 --- [http-nio-8080-exec-1] com.wyl.blog.aspect.LogAspect            : Result : DetailPage
+2021-08-18 12:30:11.999  INFO 5576 --- [http-nio-8080-exec-6] com.wyl.blog.aspect.LogAspect            : Request: RequestLog{url='http://localhost:8080/blog/33;jsessionid=E0BFFD758AFE6DC39A9CE70248899963', ip='0:0:0:0:0:0:0:1', classMethod='com.wyl.blog.web.IndexController.blog', args=[33, {}]}
+2021-08-18 12:30:12.018  INFO 5576 --- [http-nio-8080-exec-6] com.wyl.blog.aspect.LogAspect            : Result : DetailPage
+2021-08-18 12:30:12.355  INFO 5576 --- [http-nio-8080-exec-8] com.wyl.blog.aspect.LogAspect            : Request: RequestLog{url='http://localhost:8080/comments/33', ip='0:0:0:0:0:0:0:1', classMethod='com.wyl.blog.web.CommentController.comments', args=[33, {}]}
+2021-08-18 12:30:12.369  INFO 5576 --- [http-nio-8080-exec-8] com.wyl.blog.aspect.LogAspect            : Result : DetailPage :: commentList
